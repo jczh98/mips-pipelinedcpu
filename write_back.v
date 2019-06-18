@@ -19,12 +19,12 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module write_back(r_alu,m_o,m2reg,wdi
-    );
-	 input [31:0] r_alu;
-	 input [31:0] m_o;
-	 input m2reg;
-	 output [31:0] wdi;
-	 
-	 mux32_2_1 wb_stage (r_alu, m_o, m2reg, wdi);
-
+	);
+	input [31:0] r_alu;
+	input [31:0] m_o;
+	input m2reg;
+	output [31:0] wdi;
+	
+	mux32_2_1 wb_stage (r_alu, m_o, m2reg, wdi);
+	
 endmodule

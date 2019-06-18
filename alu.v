@@ -19,22 +19,22 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module alu(alua,alub,ealuc,ealu,z
-    );
-	 input [31:0] alua,alub;
-	 input [2:0] ealuc;
-	 output [31:0] ealu;
-	 output z;
-	 
-
-    assign ealu = (ealuc == 3'b000) ? alua + alub :
-	               (ealuc == 3'b001) ? alua & alub :
-	               (ealuc == 3'b010) ? alua | alub :
-	               (ealuc == 3'b011) ? alua ^ alub :
-	               (ealuc == 3'b100) ? alub >> alua :
-	               (ealuc == 3'b101) ? alub << alua :
-	               (ealuc == 3'b110) ? alua - alub :					
-	    				32'hxxxxxxxx;
+	);
+	input [31:0] alua,alub;
+	input [2:0] ealuc;
+	output [31:0] ealu;
+	output z;
 	
-	 assign z = ~|ealu;
+	
+	assign ealu = (ealuc == 3'b000) ? alua + alub :
+	(ealuc == 3'b001) ? alua & alub :
+	(ealuc == 3'b010) ? alua | alub :
+	(ealuc == 3'b011) ? alua ^ alub :
+	(ealuc == 3'b100) ? alub >> alua :
+	(ealuc == 3'b101) ? alub << alua :
+	(ealuc == 3'b110) ? alua - alub :					
+	32'hxxxxxxxx;
+	
+	assign z = ~|ealu;
 	
 endmodule

@@ -19,12 +19,12 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module program_counter(clk,clrn,npc,pc,wir
-    );
-	 input wir;
-	 input clk, clrn;
-	 input [31:0] npc;		//输入下一题指令地址
-	 output [31:0] pc;		//输出指令地址
- 
- 	 dff32 program_counter(npc,clk,clrn,pc,wir);   //利用32位的D触发器实现PC
-	 
+	);
+	input wir;
+	input clk, clrn;
+	input [31:0] npc;		//输入下一题指令地址
+	output [31:0] pc;		//输出指令地址
+	
+	dff32 program_counter(npc,clk,clrn,pc,wir);   //利用32位的D触发器实现PC
+	
 endmodule

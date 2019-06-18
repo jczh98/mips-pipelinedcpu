@@ -19,18 +19,18 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module mux1_2_1(a0,a1,s,y
-    );
-	 input a0,a1;
-	 input s;
-	 output y;
-	 
-	 reg y;
-	 always @ (*)
-		begin
-			case(s)
-				1'b0: y=a0;
-				1'b1: y=a1;
-				default: y=1'bx; 
-			endcase
-		end
+	);
+	input a0,a1;
+	input s;
+	output y;
+	
+	reg y;
+	always @ (*)
+	begin
+		case(s)
+			1'b0: y=a0;
+			1'b1: y=a1;
+			default: y=1'bx; 
+		endcase
+	end
 endmodule
