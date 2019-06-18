@@ -59,3 +59,7 @@ Developed as the expriment project for Computer Architecture in UESTC
 
 - iverilog in [http://iverilog.icarus.com](http://iverilog.icarus.com)
 - gtkwave
+
+## Credits
+
+`Keqiang Li`
